@@ -80,7 +80,7 @@ class AppServiceProvider extends ServiceProvider
         View::share('programmeExamination', ProgrammeExamination::first()); 
         View::share('examRequirement', ExamRequirement::first()); 
         View::share('events', Event::latest()->paginate(20)); 
-        View::share('Livestream', Livestream::latest()->paginate(20)); 
+        View::share('livestream', LiveStream::latest()->paginate(20)); 
         
      
 
