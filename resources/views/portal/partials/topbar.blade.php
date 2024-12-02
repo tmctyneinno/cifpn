@@ -10,7 +10,7 @@
                                 <i class="ti ti-wallet"></i> 
                             </div>
                             <div class="wallet-info">
-                                <span style="font-weight: bold; color: #333;" > $1,200</span> <!-- Example balance display -->
+                                <span style="font-weight: bold; color: #333;" >₦0.00</span> <!-- Example balance display -->
                                 {{-- <span class="wallet-action">Manage Wallet</span> --}}
                             </div>
                         </a>
