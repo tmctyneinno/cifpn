@@ -19,7 +19,6 @@ use App\Http\Controllers\Auth\VerificationController;
 |
 */
 
-
 require __DIR__.'/admin.php';
 require __DIR__.'/portal.php';
 

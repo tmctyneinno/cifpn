@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 14, 2024 at 10:49 AM
+-- Generation Time: Dec 09, 2024 at 04:55 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -42,7 +42,7 @@ CREATE TABLE `about_us` (
 --
 
 INSERT INTO `about_us` (`id`, `title`, `content`, `image`, `header_image`, `created_at`, `updated_at`) VALUES
-(1, 'IFPN', '<p>The Institute of Financial Crime and Fraud Prevention of Nigeria (IFPN) is a leading professional body dedicated to the advancement of financial crime prevention and fraud control in Nigeria. IFPN brings together experts and practitioners across industries to build a collaborative and knowledge-driven network aimed at combating financial crime and fostering transparency, compliance, and integrity in financial systems. We serve as a benchmark of professional excellence and are committed to continuous development and education in anti-fraud and financial crime measures.&nbsp;</p>', 'assets/images/about/1730907477.jpg', 'assets/images/about/1729848117.png', '2024-10-25 08:14:11', '2024-11-06 14:37:57');
+(1, 'IFPN', '<p>The Institute of Financial Crime and Fraud Prevention of Nigeria (IFPN) is a leading professional body dedicated to the advancement of financial crime prevention and fraud control in Nigeria. IFPN brings together experts and practitioners across industries to build a collaborative and knowledge-driven network aimed at combating financial crime and fostering transparency, compliance, and integrity in financial systems. We serve as a benchmark of professional excellence and are committed to continuous development and education in anti-fraud and financial crime measures.&nbsp;</p>', 'assets/images/about/1732527971.jpg', 'assets/images/about/1732528074.jpg', '2024-10-25 08:14:11', '2024-11-25 08:47:54');
 
 -- --------------------------------------------------------
 
@@ -70,7 +70,67 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `email`, `email_verified_at`, `password`, `phone`, `last_login`, `login_ip`, `otp`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@gmail.com', NULL, '$2y$10$SDWpI4m9YUWunhV9hP/spuxDlU25RYtkN52ts4CzC5fZjnHxv.Zwq', '', '', '', '', NULL, NULL, NULL);
+(2, 'Admin', 'admin@gmail.com', NULL, '$2y$10$SDWpI4m9YUWunhV9hP/spuxDlU25RYtkN52ts4CzC5fZjnHxv.Zwq', '', '', '', '', NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `advisory_board_members`
+--
+
+CREATE TABLE `advisory_board_members` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` text NOT NULL,
+  `content` text NOT NULL,
+  `image` text NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `advisory_board_members`
+--
+
+INSERT INTO `advisory_board_members` (`id`, `name`, `content`, `image`, `created_at`, `updated_at`) VALUES
+(1, 'Florence Abraham (MSc., FCA, HCIB, CAMS, FCIN, FISL)', '<p>Professionally Qualified in Accounting, Leadership &amp; Directorship with proven integrity, Anti-Money Laundering, Consultancy, and Educational Policies &amp; Administration. With 33 years of experience in Central Banking, 25 as Banks\' Regulator with proven ability in conducting trainings for Board / Senior Mgmt &amp; Staff on AML/CFT/CFP Compliance &amp; Prudential Regulations, Risk-Based Supervision, Reporting and regulatory compliance, etc. Experienced in training of West African Banking Regulators &amp; pioneered the implementation of Risk-Based AML Examination of Banks in Nigeria.</p><p>She is a former Director at the Central Bank of Nigeria, she is currently the CEO/Chief Consultant in Dynamic “D” and EFIFA Partners<br><br>Policies &amp; Administration, team building/ leadership, Mentoring,&nbsp;<br><br>Management accounting &amp; Project Management: appraisal /inspection/investigations of Projects, report formulation/presentation.<br><br>Leader with proven integrity.<br><br>Coach and Mentor. Youth and Young People, Women trainer and Coach.<br><br>Women Development and empowerment&nbsp;<br><br>Personality Building</p>', 'assets/images/advisoryBoardMember/1731933732.png', '2024-11-18 10:41:49', '2024-11-18 11:42:12'),
+(2, 'PROFILE OF DR OLUFEMI MOSAKU-JOHNSON', '<p>Dr Olufemi Mosaku-Johnson is a major Corporate Governance, Entrepreneurial, Education and Innovative Business expert in Nigeria.<br>He is the initiator and founding Registrar/CEO,<br>Association of Corporate Governance Professionals of Nigeria.<br>Chairman, Hero Advisory and Governance Services.<br>He is an Expert reviewer of the Financial Reporting Council of Nigeria.&nbsp;<br>He is also the State Consultant Counseling Psychologist, Lagos State ( PSSDC)&nbsp;<br>A graduate of Public Administration and has Masters in Personnel Psychology (EKSU), and earned PhD in Organization Leadership with Specialization in Leadership Psychology (North Western University Florida, USA.<br>He is a Chartered Secretary and Administrator, a Chartered Management Practitioner, Chartered Personnel Management Practitioner and Chartered Economist,</p><p>His illustrious career started at a Law Union &amp; Rock Insurance Plc,as Underwiter, for ten years and served for 8 &nbsp;years at the &nbsp;Lagos State Public Service Staff Dev. Centre, as State consultant Counseling Psychologist the position which he has just been reappointed after 15 years.</p><p>He subsequently moved to the Institute of Management (NIM) heading Management and Operations Management training unit where he was the best staff of the year for all the years he worked there.&nbsp;<br>He later &nbsp;moved to the Institute of Directors\' (IoD), Nigeria where he pioneered and led the Directors\" Development Department with triple A rated directors learning in Nigeria and in the United Kingdom.</p><p>He is a member of the Board of trustees and secretary of the International Aeronautics College.<br>Chairman of Laba Foods Nigeria Ltd.<br>Secretary to the Board, Medical Ethics and Governance Initiatives, Board Member, Foundation for Value Transformation.<br>Committee Member, Lagos State Post Service Welfare Council.<br>Technical Consultant to Lagos Chamber of Commerce and Industry as well as Examiner at the Chartered Institute of Bankers (CIBN)and Institute of Chartered Secretaries and Administration ( ICSAN)<br>He is IFC Certified Corporate Governance Board Leadership Trainer, South Africa and CMD Accredited Trainer.<br>In the past he lectured on part-time basis at the Lagos State polytechnic for 8 years.</p><p>He is a certified sustainable leadership expert by the University of Mauritius and alumnus of the Lagos Business School,,<br>He has published 11 books on leadership, management, entrepreneurship and innovation.</p><p>He has trained millions of people from all sectors of the economy In leadership, operations, strategy, corporate governance, anti-corruption etc</p><p>He is from the paramount ruling house In Aguda-Ogba, Lagos and happily married with Children</p>', 'assets/images/advisoryBoardMember/1731932220.jpg', '2024-11-18 11:17:00', '2024-11-18 11:17:00'),
+(3, 'FATUNATA SOUKOUNA COKER', '<p>Chairman Creditregistry | Chairman Afrinvest Securities Limited<br>An entrepreneurial business builder, turn-around specialist, and senior technology executive with over 20 years of global strategy, operational and organizational management and strategic marketing originally anchored in the USA. On returning to Africa over the past 12 years held pan Africa roles, leading, and working with multi-national and African businesses, engaging partnership across multiple geographies to achieve business transformation through technology.</p><p>Track record at Board level as Non-Executive Chairman at financial services companies, transformed business performance and Board effectiveness through strong governance, MD/CEO coaching and developing innovative business models. Adept at aligning and focusing diverse stakeholders to achieve outstanding outcomes. Board advisor on strategy and market engagement in start-up ecosystems assisting in development and execution of market strategies to gain traction and scale to attract investments.</p><p>Core skills include expertise in distribution channel management, development of worldwide sales and marketing enablement programs, strategic partnering, program delivery, negotiation, and commercial management gained in Fortune 500 corporate structures</p><p>She also participates in start-up forums and IT incubators across the globe, including faith base organizations as well and is a very active member in her communities, sharing her expertise with the LBS Executive MBAs and American University of Cairo Business School Undergrads and is on the National Planning committee of the Institute of Board of Directors (IoD) Nigeria. Mentor for undergrads at GBS, Emory University, She’s passionate about the electrification of the African continent and creating a seamless payment and settlement solution across Africa</p>', 'assets/images/advisoryBoardMember/1731932305.jpg', '2024-11-18 11:18:25', '2024-11-18 11:18:25'),
+(4, 'Prof. Ehi Eric Esoimeme Esq., LLB, BL, LLM, JD, HC, PhD, DProfQAHE, ICA, CAMC, CCO, CPRM, CRA, CFIP, FGAFM, FCACC, FERP, FIMC, HON. FQAHE', '<p>Professor of Business Law and Ethics at James Hope University (Nigeria), Rudolph KwanueUniversity (Liberia) and Kennedy University of Baptist (USA), and a Distinguished Professor of Financial Crimes Compliance at the American University of Business and Social Sciences. Prof. Esoimeme is also concurrently the Founder and Managing Partner of E-Four and AAF, an Accredited Training Partner at the Global Academy of Finance and Management (USA) and the Editor in Chief of DSC Publications Ltd. (Nigeria). His area of specialism and expertise is in countering financial crime. This is categorized into regulatory law, substantive law, and professional compliance guidance in terms of strategic management of financial crime risks and vulnerabilities.</p><p>&nbsp;</p><p>Prof. Esoimeme’s skill and knowledge in the field of the financial crime space are drawn from his many years of experience as a researcher and consultant in anti-money laundering laws and policies, counter-fraud measures, and anti-corruption strategies. So far, Prof. Esoimeme has authored more than 80 publications, including twelve books on financial crime compliance while his research on corruption and anti-corruption has been featured on Harvard Law School\'s bibliography on corruption and anti-corruption. Prof. Esoimeme’s second book titled \"The Risk-Based Approach to Combating Money Laundering and Terrorist Financing\" was rated as the #5 best money laundering book of all time by Financial Expert in its 2021 refresh of the rankings while Ehi’s fifth book “Balancing Anti-Money Laundering/Counter-Terrorist Financing Requirements and Financial Inclusion” was named one of the best Banks books of all time by BookAuthority. On the 3rd of September, 2024, Prof. Esoimeme’s Research Items on Financial Crime Compliance reached a new Milestone of 40,000 reads on ResearchGate.</p><p>&nbsp;</p><p>Prof. Esoimeme received a bachelor’s degree in law from the University of Lagos and holds a master’s degree in International Commercial Law with specialization in international banking law and anti-money laundering compliance from Cardiff University. Prof. Esoimeme holds the U.S. equivalent of a Juris Doctor in International Law and two PhD Degrees in International Public Law. He was admitted to the Nigerian Bar as a Barrister and Solicitor of the Supreme Court of Nigeria in 2010.</p><p>&nbsp;</p><p>Prof. Esoimeme is a fellow of the International Institute of Certified Forensic Investigation Professionals Inc., USA., a fellow of the Global Academy of Finance and Management, a Lifetime Honorary fellow of the International Association for Quality Assurance in Pre-tertiary and Higher Education, Honorary fellow in Financial Crime Compliance and Effective Leadership in Africa at the Mayo College of Medical Laboratory and Technology, a fellow of the Association of Enterprise Risk Management Professionals, a fellow of the Institute of Management Consultants, and a member of the Nigerian Bar Association.</p>', 'assets/images/advisoryBoardMember/1731932551.jpg', '2024-11-18 11:22:31', '2024-11-18 11:22:31');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `application_forms`
+--
+
+CREATE TABLE `application_forms` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `user_email` varchar(255) NOT NULL,
+  `phone_number` varchar(255) NOT NULL,
+  `qualification` varchar(255) NOT NULL,
+  `membership_category` varchar(255) NOT NULL,
+  `certification_path` varchar(255) DEFAULT NULL,
+  `academic_qualifications_path` varchar(255) DEFAULT NULL,
+  `work_experience_path` varchar(255) DEFAULT NULL,
+  `professional_certifications_path` varchar(255) DEFAULT NULL,
+  `identification_path` varchar(255) DEFAULT NULL,
+  `applicant_status` text DEFAULT NULL,
+  `payment_option` varchar(255) NOT NULL,
+  `fee_acknowledged` tinyint(4) DEFAULT NULL,
+  `reference` text DEFAULT NULL,
+  `amount` double(10,2) DEFAULT NULL,
+  `payment_status` text DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `application_forms`
+--
+
+INSERT INTO `application_forms` (`id`, `user_id`, `user_email`, `phone_number`, `qualification`, `membership_category`, `certification_path`, `academic_qualifications_path`, `work_experience_path`, `professional_certifications_path`, `identification_path`, `applicant_status`, `payment_option`, `fee_acknowledged`, `reference`, `amount`, `payment_status`, `created_at`, `updated_at`) VALUES
+(51, 6, 'eshanokpe@gmail.com', '+1 (853) 587-1297', 'Bachelor\'s Degree', 'Full Membership', 'assets/application/certifications/1733117495.docx', 'assets/application/academic_qualifications/1733117495.docx', 'assets/application/work_experience/1733117495.docx', 'assets/application/professional_certifications/1733117495.docx', '1733117495.docx', 'pending', 'opay', 1, 'APP-674d4637960d1', 5000.00, 'pending', '2024-12-02 04:31:35', '2024-12-02 04:31:35');
 
 -- --------------------------------------------------------
 
@@ -282,10 +342,6 @@ INSERT INTO `dropdown_items` (`id`, `menu_item_id`, `name`, `slug`, `created_at`
 (136, 6, 'Membership Application', 'membership-application', '2024-11-05 14:45:59', '2024-11-05 14:45:59'),
 (137, 7, 'Programmes and Examinations', 'programmes-and-examinations', '2024-11-06 08:01:25', '2024-11-06 08:01:25'),
 (138, 7, 'Exam Requirement', 'exam-requirement', '2024-11-06 08:01:25', '2024-11-06 08:01:25'),
-(157, 15, 'Position Papers & Policy Briefs', 'position-papers-policy-briefs', '2024-11-13 10:50:42', '2024-11-13 10:50:42'),
-(158, 15, 'Government & NGO Partnerships', 'government-ngo-partnerships', '2024-11-13 10:50:42', '2024-11-13 10:50:42'),
-(159, 15, 'Legislative Recommendations', 'legislative-recommendations', '2024-11-13 10:50:42', '2024-11-13 10:50:42'),
-(160, 15, 'Policies & Governance Framework', 'policies-governance-framework', '2024-11-13 10:50:42', '2024-11-13 10:50:42'),
 (166, 16, 'Blog/News', 'blognews', '2024-11-13 11:44:39', '2024-11-13 11:44:39'),
 (167, 16, 'Events', 'events', '2024-11-13 11:44:39', '2024-11-13 11:44:39'),
 (168, 16, 'Testimonials', 'testimonials', '2024-11-13 11:44:39', '2024-11-13 11:44:39'),
@@ -295,7 +351,12 @@ INSERT INTO `dropdown_items` (`id`, `menu_item_id`, `name`, `slug`, `created_at`
 (172, 4, 'Mission', 'mission', '2024-11-13 13:10:29', '2024-11-13 13:10:29'),
 (173, 4, 'Core Activities', 'core-activities', '2024-11-13 13:10:29', '2024-11-13 13:10:29'),
 (174, 4, 'Governance & Board', 'governance-board', '2024-11-13 13:10:29', '2024-11-13 13:10:29'),
-(175, 4, 'Partners and Affiliates', 'partners-and-affiliates', '2024-11-13 13:10:29', '2024-11-13 13:10:29');
+(175, 4, 'Partners and Affiliates', 'partners-and-affiliates', '2024-11-13 13:10:29', '2024-11-13 13:10:29'),
+(176, 15, 'Position Papers & Policy Briefs', 'position-papers-policy-briefs', '2024-11-14 10:21:30', '2024-11-14 10:21:30'),
+(177, 15, 'Government & NGO Partnerships', 'government-ngo-partnerships', '2024-11-14 10:21:30', '2024-11-14 10:21:30'),
+(178, 15, 'Legislative Recommendations', 'legislative-recommendations', '2024-11-14 10:21:30', '2024-11-14 10:21:30'),
+(179, 15, 'Policies & Governance Framework', 'policies-governance-framework', '2024-11-14 10:21:30', '2024-11-14 10:21:30'),
+(180, 15, 'Advisory Board Members', 'advisory-board-members', '2024-11-14 10:21:30', '2024-11-14 10:21:30');
 
 -- --------------------------------------------------------
 
@@ -597,7 +658,7 @@ INSERT INTO `menu_items` (`id`, `name`, `slug`, `created_at`, `updated_at`) VALU
 (4, 'About us', 'about-us', '2024-10-08 08:21:06', '2024-10-08 08:21:06'),
 (6, 'Membership', '#', '2024-10-08 08:24:29', '2024-11-05 12:19:14'),
 (7, 'Certifications', '#', '2024-10-08 08:27:42', '2024-11-05 12:18:45'),
-(15, 'Advocacy & Policy', '#', '2024-11-05 12:19:53', '2024-11-07 07:53:02'),
+(15, 'Advocacy & Policy', 'advocacy-policy', '2024-11-05 12:19:53', '2024-11-14 10:21:30'),
 (16, 'Resource Center', '#', '2024-11-07 09:07:43', '2024-11-07 09:07:43'),
 (17, 'Contact', 'contact', '2024-11-12 10:58:51', '2024-11-12 10:58:51');
 
@@ -655,7 +716,26 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (35, '2024_11_13_122351_create_policies_governances_table', 33),
 (36, '2024_11_13_125227_create_live_streams_table', 34),
 (37, '2024_11_13_130455_create_live_streams_table', 35),
-(38, '2024_11_14_061755_create_sliders_table', 36);
+(38, '2024_11_14_061755_create_sliders_table', 36),
+(39, '2024_11_18_113118_create_advisory_board_members_table', 37),
+(40, '2024_11_18_114103_create_advisory_board_members_table', 38),
+(41, '2024_11_19_193022_create_password_resets_table', 39),
+(42, '2024_11_21_080500_create_application_forms_table', 40),
+(43, '2024_11_22_123242_create_transactions_table', 41);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `password_resets`
+--
+
+CREATE TABLE `password_resets` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -869,6 +949,35 @@ INSERT INTO `testimonials` (`id`, `content`, `image`, `author_name`, `author_tit
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `transactions`
+--
+
+CREATE TABLE `transactions` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `application_id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `user_email` varchar(255) NOT NULL,
+  `amount` decimal(15,2) NOT NULL,
+  `status` enum('pending','success','failed','cancelled') NOT NULL,
+  `transaction_type` varchar(255) NOT NULL,
+  `payment_instrument` text DEFAULT NULL,
+  `transaction_reference` text DEFAULT NULL,
+  `order_no` text DEFAULT NULL,
+  `currency` text DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `transactions`
+--
+
+INSERT INTO `transactions` (`id`, `application_id`, `user_id`, `user_email`, `amount`, `status`, `transaction_type`, `payment_instrument`, `transaction_reference`, `order_no`, `currency`, `created_at`, `updated_at`) VALUES
+(51, 51, 6, 'eshanokpe@gmail.com', 50000.00, 'success', 'opay', '506146****1106', 'APP-674d4637960d1', '241202145661291039005', 'NGN', '2024-12-02 04:31:35', '2024-12-02 04:34:13');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -892,7 +1001,11 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 (2, 'Zeph Phillips', 'zalyvyca@mailinator.com', NULL, '$2y$10$bmwTsmETMGluGkH7HSA/8ebo9VnmiWcKns0pAq/17RrRNtVNH519W', NULL, '2024-11-05 10:37:51', '2024-11-05 10:37:51'),
 (3, 'Maxwell Keith', 'mahazyr@mailinator.com', NULL, '$2y$10$8HIa5dGpkgHdW8NXhqFCregHIqs./pkrO9bNpjAlXNNy3jcBm0BFG', NULL, '2024-11-05 10:38:46', '2024-11-05 10:38:46'),
 (4, 'Claire Reid', 'tizucobori@mailinator.com', NULL, '$2y$10$xN4i0rH7d71OzWzyNGnq9eFn84icrtNlESxBZGg4U52ka5NDvbZ7C', NULL, '2024-11-05 10:39:59', '2024-11-05 10:39:59'),
-(6, 'Chandler Mccray', 'eshanokpe@gmail.com', NULL, '$2y$10$pcAcbE3pmp/2MOxIRazVtezuU/SmFMqHaWsuy/BxTF/b/OnbmzScK', NULL, '2024-11-06 12:20:59', '2024-11-06 12:20:59');
+(6, 'Chandler Mccray', 'eshanokpe@gmail.com', '2024-11-19 11:03:36', '$2y$10$WoHqkoUan3UdCEWGMxOTHuj4QdfxVWGZUyTrW4fwW1OvNfyb2hQei', 'jKlc1cliTPXslqRkkEs2PMWtVFew82zCAW7XodV7FnOTKvjKvI2T39V0rm6X', '2024-11-06 12:20:59', '2024-11-25 09:16:14'),
+(21, 'Ian Nixon', 'bakoy53601@kimasoft.com', '2024-11-19 11:03:36', '$2y$10$0eeSwRspPbgAZqyCqugprOzELzB0i3q/hZWsaBYN91yLhm.wGeTEC', NULL, '2024-11-19 10:53:53', '2024-11-19 11:03:36'),
+(22, 'Levi Hines', 'huwipyliwe@mailinator.com', NULL, '$2y$10$xTthxOyufUspQY2AGBXHuuvsLgPdO.DvyV3i2.Ss5raMktZg/O37C', NULL, '2024-11-19 11:54:01', '2024-11-19 11:54:01'),
+(23, 'Leigh Kirk', 'sekyxasu@mailinator.com', NULL, '$2y$10$uvPPooPp9ZqHL45/B3h.uuzlAwdbbyUNWiuEl9N6m6A/a.poxSxvm', NULL, '2024-11-19 11:57:32', '2024-11-19 11:57:32'),
+(24, 'Carter Bush', 'qubyge@mailinator.com', NULL, '$2y$10$49ozpiNNfoZ6qt1ZkHiDHO1Pya9A7lXioK84AjHAqvzhgVr8UnZ5q', NULL, '2024-11-22 03:37:56', '2024-11-22 03:37:56');
 
 -- --------------------------------------------------------
 
@@ -933,6 +1046,18 @@ ALTER TABLE `about_us`
 ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `admins_email_unique` (`email`);
+
+--
+-- Indexes for table `advisory_board_members`
+--
+ALTER TABLE `advisory_board_members`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `application_forms`
+--
+ALTER TABLE `application_forms`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `careers`
@@ -1068,6 +1193,13 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `password_resets`
+--
+ALTER TABLE `password_resets`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `password_resets_email_index` (`email`);
+
+--
 -- Indexes for table `payment_models`
 --
 ALTER TABLE `payment_models`
@@ -1130,6 +1262,14 @@ ALTER TABLE `testimonials`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `transactions`
+--
+ALTER TABLE `transactions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `transactions_application_id_foreign` (`application_id`),
+  ADD KEY `transactions_user_id_foreign` (`user_id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -1156,7 +1296,19 @@ ALTER TABLE `about_us`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `advisory_board_members`
+--
+ALTER TABLE `advisory_board_members`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `application_forms`
+--
+ALTER TABLE `application_forms`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `careers`
@@ -1204,7 +1356,7 @@ ALTER TABLE `core_values`
 -- AUTO_INCREMENT for table `dropdown_items`
 --
 ALTER TABLE `dropdown_items`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=176;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=181;
 
 --
 -- AUTO_INCREMENT for table `events`
@@ -1288,7 +1440,13 @@ ALTER TABLE `menu_items`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+
+--
+-- AUTO_INCREMENT for table `password_resets`
+--
+ALTER TABLE `password_resets`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `payment_models`
@@ -1351,10 +1509,16 @@ ALTER TABLE `testimonials`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `transactions`
+--
+ALTER TABLE `transactions`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `vision_missions`
@@ -1371,6 +1535,13 @@ ALTER TABLE `vision_missions`
 --
 ALTER TABLE `dropdown_items`
   ADD CONSTRAINT `dropdown_items_menu_item_id_foreign` FOREIGN KEY (`menu_item_id`) REFERENCES `menu_items` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `transactions`
+--
+ALTER TABLE `transactions`
+  ADD CONSTRAINT `transactions_application_id_foreign` FOREIGN KEY (`application_id`) REFERENCES `application_forms` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `transactions_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
