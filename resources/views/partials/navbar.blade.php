@@ -6,7 +6,7 @@
                 <p class="top-details">
                     Admission Going On, Hurry To  <a href="{{ route('home.pages', 'membership-login') }}">Enroll Now <i class="fal fa-arrow-right"></i></a>
                 </p>
-            </div> 
+            </div>  
             <div class="right-header-top">
                 <div class="working-time">
                     <i class="far fa-clock"></i>
@@ -40,13 +40,15 @@
                     <ul class="mainmenu">
                         @forelse ($menuItems as $item)
                             <li class="menu-item {{ $item->dropdownItems->count() > 0 ? 'has-droupdown' : '' }}">
-                                <a class="menu-link" href="{{ route('home.pages', $item->slug) }}">{{ $item->name }}</a>
+                                <a class="menu-link" href="{{ route('home.pages', $item->slug) }}">
+                                    {{ $item->name }}</a>
                                 
                                 @if($item->dropdownItems->count() > 0)
                                     <ul class="submenu">
                                         @foreach ($item->dropdownItems as $dropdownItem)
                                             <li >
-                                                <a href="{{ route('home.pages', $dropdownItem->slug) }}">{{ $dropdownItem->name }}</a>
+                                                <a href="{{ route('home.pages', $dropdownItem->slug) }}">
+                                                    {{ $dropdownItem->name }}</a>
                                                  
                                             </li>
                                         @endforeach

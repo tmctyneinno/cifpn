@@ -188,7 +188,7 @@ Route::prefix('admin')->group(function () {
         Route::put('blog/{id}', [BlogController::class, 'update'])->name('admin.blog.update');
         Route::get('blog/{id}', [BlogController::class, 'destroy'])->name('admin.blog.destroy');
         Route::get('blog/{id}/details', [BlogController::class, 'details'])->name('blog.details');
-        
+         
         //Event
         Route::get('event/index', [EventController::class, 'index'])->name('admin.event.index');
         Route::get('event/create', [EventController::class, 'create'])->name('admin.event.create');

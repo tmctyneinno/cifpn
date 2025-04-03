@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Events\UserCreating;
 use Mail;
-use Http;   
+use Http;    
 use App\Mail\MailNotify;
 use App\Mail\VerificationEmail;
 use Illuminate\Http\Request;

@@ -8,6 +8,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\Admin\CoreActivitiesController; 
 use App\Http\Controllers\Auth\VerificationController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

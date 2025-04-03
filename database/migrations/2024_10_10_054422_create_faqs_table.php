@@ -12,7 +12,7 @@ return new class extends Migration
      * @return void
      */
     public function up()
-    {
+    { 
         Schema::create('faqs', function (Blueprint $table) {
             $table->id();
             $table->text('question')->nullable();

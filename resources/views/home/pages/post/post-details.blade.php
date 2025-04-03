@@ -9,7 +9,7 @@
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
                 {{-- <h1 class="title">Solution Details</h1> --}}
                 <h1 class="title"> {!! Str::limit($postItem->title, 10, '...') !!}</h1>
-            </div>
+            </div> 
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                 <div class="bread-tag">
                     <a href="{{ route('home') }}">Home</a>
@@ -36,7 +36,6 @@
                     <p class="disc" >
                         {!! $postItem->content !!} 
                     </p>
-                    
                 </div>
                
                 
@@ -54,7 +53,8 @@
                         @forelse ($relatedPost as $relatedPost)
                              <!-- single categoris -->
                             <ul class="single-categories">
-                                <li><a href="{{ route('post.detail', ['slug' => $relatedPost->slug] ) }}">{{ $relatedPost->title }} <i class="far fa-long-arrow-right"></i></a></li>
+                                <li><a href="{{ route('post.detail', ['slug' => $relatedPost->slug] ) }}">
+                                    {{ $relatedPost->title }} <i class="far fa-long-arrow-right"></i></a></li>
                             </ul>
                             <!-- single categoris End -->
                         @empty

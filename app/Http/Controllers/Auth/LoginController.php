@@ -63,12 +63,6 @@ class LoginController extends Controller
         ]);
     }
 
-    /**
-     * Validate the login request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return void
-     */
     protected function validateLogin(Request $request)
     {
         try {
@@ -79,8 +73,7 @@ class LoginController extends Controller
             ]);
         } catch (\Illuminate\Validation\ValidationException $e) {
             // Log validation errors for debugging
-            dd($e->errors());
-            
+            return redirect()->back()->with('error', 'Error'.$e->errors());
         }
     }
 
